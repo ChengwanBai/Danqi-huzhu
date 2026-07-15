@@ -16,7 +16,7 @@
   "prefer_related_applications": false,
   "shortcuts": [
     {"name": "Start Battle", "short_name": "Start", "url": "./index.html", "icons": [{"src": "./icons/icon-192.png", "sizes": "192x192"}]},
-    {"name": "中文版", "short_name": "中文", "url": "./zh", "icons": [{"src": "./icons/icon-192.png", "sizes": "192x192"}]}
+    {"name": "中文版", "short_name": "中文", "url": "./zh/", "icons": [{"src": "./icons/icon-192.png", "sizes": "192x192"}]}
   ],
   "icons": [
     {"src": "./icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any"},

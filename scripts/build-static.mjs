@@ -8,6 +8,7 @@ const publicDir = join(dist, 'public');
 const entries = [
   'index.html',
   'index.zh.html',
+  'zh',
   'manifest.webmanifest',
   'sw.js',
   'PRIVACY.md',
@@ -20,6 +21,7 @@ const routeFiles = [
   ['/', 'index.html', 'text/html; charset=utf-8', 'no-cache'],
   ['/index.html', 'index.html', 'text/html; charset=utf-8', 'no-cache'],
   ['/zh', 'index.zh.html', 'text/html; charset=utf-8', 'no-cache'],
+  ['/zh/', 'index.zh.html', 'text/html; charset=utf-8', 'no-cache'],
   ['/index.zh.html', 'index.zh.html', 'text/html; charset=utf-8', 'no-cache'],
   ['/manifest.webmanifest', 'manifest.webmanifest', 'application/manifest+json; charset=utf-8', 'no-cache'],
   ['/sw.js', 'sw.js', 'text/javascript; charset=utf-8', 'no-cache'],

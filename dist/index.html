@@ -386,7 +386,7 @@
   $('speedBtn').onclick=()=>{gameSpeed=gameSpeed===1?2:1;$('speedBtn').textContent=`×${gameSpeed}`;toast(`March speed ×${gameSpeed}`);};
   $('soundBtn').onclick=()=>{sound=!sound;$('soundBtn').textContent=sound?'♪':'×';};
   $('dismissBtn').onclick=()=>{const t=towers.find(x=>x.id===selectedId);if(!t)return;const refund=Math.round(9*Math.pow(1.75,t.level-1));food+=refund;burst(towerPos(t).x,towerPos(t).y,'#8a7658',10);towers=towers.filter(x=>x!==t);selectedId=null;sfx('buy');toast(`Tile dismissed. Refunded ${refund} rations.`);updateUI();};
-  $('langBtn').onclick=()=>{try{localStorage.setItem('danqiLang','zh');}catch(e){}location.href='./zh';};
+  $('langBtn').onclick=()=>{try{localStorage.setItem('danqiLang','zh');}catch(e){}location.href='./zh/';};
   document.addEventListener('keydown',e=>{if(e.code==='Space'){e.preventDefault();recruit();}if(e.key==='1')useSkill();if(e.key==='2')useAmbush();if(e.key==='3')useRation();if(e.key.toLowerCase()==='p'||e.key==='Escape'){if(!$('armory').classList.contains('hidden'))closeArmory();else if(!$('codex').classList.contains('hidden'))closeCodex();else $('pauseBtn').click();}});
   document.addEventListener('visibilitychange',()=>{if(document.hidden&&running&&!paused&&!choiceOpen)openPause();});
   const isIOS=/iPad|iPhone|iPod/.test(navigator.userAgent)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1);
