@@ -30,7 +30,8 @@ const routeFiles = [
   ['/icons/icon-512.png', 'icons/icon-512.png', 'image/png', 'public, max-age=31536000, immutable'],
   ['/icons/icon-maskable-512.png', 'icons/icon-maskable-512.png', 'image/png', 'public, max-age=31536000, immutable'],
   ['/icons/apple-touch-icon.png', 'icons/apple-touch-icon.png', 'image/png', 'public, max-age=31536000, immutable'],
-  ['/assets/art/changban-battlefield.jpg', 'assets/art/changban-battlefield.jpg', 'image/jpeg', 'public, max-age=31536000, immutable']
+  ['/assets/art/changban-battlefield.jpg', 'assets/art/changban-battlefield.jpg', 'image/jpeg', 'public, max-age=31536000, immutable'],
+  ['/assets/audio/changban-drum-loop.wav', 'assets/audio/changban-drum-loop.wav', 'audio/wav', 'public, max-age=31536000, immutable']
 ];
 
 const embeddedRoutes = Object.fromEntries(await Promise.all(routeFiles.map(async ([urlPath, filePath, contentType, cacheControl]) => {

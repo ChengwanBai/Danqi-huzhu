@@ -1,4 +1,4 @@
-const CACHE = 'danqi-huzhu-v13';
+const CACHE = 'danqi-huzhu-v14';
 const APP_SHELL = [
   './',
   './zh/',
@@ -7,7 +7,8 @@ const APP_SHELL = [
   './icons/icon-512.png',
   './icons/icon-maskable-512.png',
   './icons/apple-touch-icon.png',
-  './assets/art/changban-battlefield.jpg'
+  './assets/art/changban-battlefield.jpg',
+  './assets/audio/changban-drum-loop.wav'
 ];
 
 self.addEventListener('install', event => {
