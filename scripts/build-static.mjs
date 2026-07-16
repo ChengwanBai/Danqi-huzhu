@@ -1,4 +1,4 @@
-import { cp, mkdir, readFile, rm, writeFile } from 'node:fs/promises';
+import { cp, mkdir, readFile, readdir, rm, writeFile } from 'node:fs/promises';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -82,6 +82,13 @@ for (const entry of entries) {
 await mkdir(publicDir, { recursive: true });
 for (const entry of entries.filter(entry => entry !== '.openai')) {
   await cp(join(root, entry), join(publicDir, entry), { recursive: true });
+}
+for (const audioDir of [join(dist, 'assets/audio'), join(publicDir, 'assets/audio')]) {
+  try {
+    for (const file of await readdir(audioDir)) {
+      if (file.startsWith('private-bgm.')) await rm(join(audioDir, file), { force: true });
+    }
+  } catch (e) {}
 }
 await mkdir(join(dist, 'server'), { recursive: true });
 await writeFile(join(dist, 'server', 'index.js'), serverEntry);

@@ -79,7 +79,11 @@
     <div class="wave-note"><b id="nextWave">Enemy approaching</b><span id="enemyCount">0 enemies</span></div>
   </footer>
   <div class="toast" id="toast"></div>
-  <audio id="bgm" src="./assets/audio/changban-drum-loop.wav" loop preload="auto"></audio>
+  <audio id="bgm" loop preload="auto">
+    <source src="./assets/audio/private-bgm.mp3" type="audio/mpeg">
+    <source src="./assets/audio/private-bgm.wav" type="audio/wav">
+    <source src="./assets/audio/changban-drum-loop.wav" type="audio/wav">
+  </audio>
   <div class="overlay" id="intro">
     <div class="panel"><h2>Rider Guard</h2><p>Recruit character tiles, merge them into heroes, and defend three lines along Changban. Choose a tactic every three waves; generals and special enemy formations arrive from wave five.</p><div class="rules"><div class="rule"><b>征</b>Six unit types<br>distinct attacks</div><div class="rule"><b>合</b>Same tile + tier<br>tier 4 promotes</div><div class="rule"><b>谋</b>Form ranks and chain kills<br>tactics reshape builds</div></div><div class="edict" id="edictPreview">War Order <b>Steady Lines</b><br>No special modifier. A stable battlefield.</div><div class="edict bounty" id="bountyPreview">Bounties <b>Ten-Kill Chain</b><br>Complete objectives for extra tiger seals.</div><div class="difficulty"><button data-difficulty="story">Story</button><button class="active" data-difficulty="normal">Campaign</button><button data-difficulty="hard">Warlord</button></div><div class="record" id="recordText">Best Merit <b>0</b> · Best Wave <b>0</b></div><button class="start" id="startBtn">Begin Battle</button><div class="menu-row"><button class="secondary" id="introArmoryBtn">Armory</button><button class="secondary" id="introCodexBtn">Codex</button></div><div class="version">English release · v0.10.0</div></div>
   </div>

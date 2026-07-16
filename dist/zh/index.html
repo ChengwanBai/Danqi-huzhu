@@ -80,7 +80,11 @@
     <div class="wave-note"><b id="nextWave">敌军将至</b><span id="enemyCount">0 名敌军</span></div>
   </footer>
   <div class="toast" id="toast"></div>
-  <audio id="bgm" src="./assets/audio/changban-drum-loop.wav" loop preload="auto"></audio>
+  <audio id="bgm" loop preload="auto">
+    <source src="./assets/audio/private-bgm.mp3" type="audio/mpeg">
+    <source src="./assets/audio/private-bgm.wav" type="audio/wav">
+    <source src="./assets/audio/changban-drum-loop.wav" type="audio/wav">
+  </audio>
   <div class="overlay" id="intro">
     <div class="panel"><h2>单骑护主</h2><p>征募兵牌，合成武将，沿长坂坡三道防线护送阿斗。每三波择一兵法，第五波起敌将与特殊军阵将陆续出现。</p><div class="rules"><div class="rule"><b>征</b>六类兵种<br>各有独立攻击</div><div class="rule"><b>合</b>同字同阶<br>四阶晋升武将</div><div class="rule"><b>谋</b>结阵连斩<br>兵法改变构筑</div></div><div class="edict" id="edictPreview">本局军令 <b>整军</b><br>无额外变数，适合熟悉战局。</div><div class="edict bounty" id="bountyPreview">悬赏 <b>十连斩</b><br>完成目标可额外获得虎符。</div><div class="difficulty"><button data-difficulty="story">演义</button><button class="active" data-difficulty="normal">鏖战</button><button data-difficulty="hard">无双</button></div><div class="record" id="recordText">最高军功 <b>0</b>　最远第 <b>0</b> 波</div><button class="start" id="startBtn">击鼓出阵</button><div class="menu-row"><button class="secondary" id="introArmoryBtn">军械库</button><button class="secondary" id="introCodexBtn">兵将图鉴</button></div><div class="version">双语发布 · v0.10.0</div></div>
   </div>
